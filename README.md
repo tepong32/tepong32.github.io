@@ -1,2 +1,4 @@
 # tepong32.github.io
-portfolio chuchu
+A little better version of my CV. Thanks to Bootstrap!
+
+https://startbootstrap.com/
