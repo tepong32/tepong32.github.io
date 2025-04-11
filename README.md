@@ -1,4 +1,6 @@
 # tepong32.github.io
 A little better version of my CV. Thanks to Bootstrap!
 
+Sources:
 https://startbootstrap.com/
+https://bootstrapmade.com
