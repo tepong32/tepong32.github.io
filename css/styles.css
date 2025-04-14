@@ -11504,6 +11504,7 @@ h1, h2, h3 {
     }
 }
 
+/* ################################################################################# */
 /* customs */
 
 /* General Styles */
@@ -11643,7 +11644,6 @@ h1, h2, h3 {
 }
 
 /* for resume */
-
 .row {
     margin-bottom: 20px; /* Space below the row */
 }
@@ -11684,3 +11684,70 @@ h1, h2, h3 {
     opacity: 1; /* Show overlay on hover */
     pointer-events: auto; /* Allow interaction when visible */
 }
+
+/* ################################################################################# */
+/* Profile Photo Effects */
+/* you can remove these if you want the static photo version */
+.profile-photo-container {
+  position: relative;
+  width: 200px; /* Adjust size as needed */
+  margin: 2rem auto;
+}
+
+.profile-frame {
+  width: 100%;
+  height: 200px; /* Match container width */
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-photo {
+  position: absolute;
+  width: 95%; /* Slightly larger than frame */
+  height: auto;
+  top: -3%; /* Adjust to control overlap amount */
+  left: 55%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Hover animation */
+.profile-photo:hover {
+  transform: translateX(-50%) scale(1.05);
+  filter: brightness(1.05);
+}
+
+/* Optional: Add floating animation */
+@keyframes float {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-10px); }
+}
+
+.profile-frame {
+  position: relative;
+}
+
+.profile-frame::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 123, 255, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.profile-photo:hover + .profile-frame::after {
+  opacity: 1;
+}
+
+

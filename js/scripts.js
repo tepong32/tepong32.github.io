@@ -47,3 +47,4 @@ window.addEventListener('scroll', () => {
         stickySocialIcons.classList.remove('show'); // Remove class to hide sticky icons
     }
 });
+
