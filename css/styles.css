@@ -11600,6 +11600,7 @@ h1, h2, h3 {
     padding: 10px; /* Padding for the caption */
 }
 
+/* Social Icons sticking to the right when scrolled-past its original position */
 .sticky-social-icons {
     position: fixed;
     top: 20px; /* Adjust as needed */
@@ -11632,10 +11633,54 @@ h1, h2, h3 {
     color: #007bff; /* Change color on hover */
 }
 
+
 /* Media query for mobile view */
 @media (max-width: 768px) {
     .sticky-social-icons {
         top: 70px; /* Adjust this value to be below the navbar */
         right: 10px; /* Adjust as needed */
     }
+}
+
+/* for resume */
+
+.row {
+    margin-bottom: 20px; /* Space below the row */
+}
+
+.social-icons {
+    display: flex; /* Use flexbox for inline layout */
+    align-items: center; /* Center items vertically */
+}
+
+.pdf-preview {
+    position: relative; /* Position relative for overlay */
+    margin-left: 15px; /* Space between social icons and PDF preview */
+}
+
+.pdf-preview embed {
+    border-radius: 5px; /* Rounded corners for the PDF preview */
+    display: block; /* Ensure it behaves like a block element */
+}
+
+.download-overlay {
+    position: absolute; /* Position overlay absolutely */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Stretch to the right */
+    bottom: 0; /* Stretch to the bottom */
+    background-color: rgba(255, 255, 255, 0.3); /* White background with 30% opacity */
+    color: #000; /* Text color */
+    display: flex; /* Use flexbox for centering text */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease; /* Smooth transition */
+    border-radius: 5px; /* Match the border radius */
+    pointer-events: none; /* Prevent interaction with the overlay when hidden */
+}
+
+.pdf-preview:hover .download-overlay {
+    opacity: 1; /* Show overlay on hover */
+    pointer-events: auto; /* Allow interaction when visible */
 }

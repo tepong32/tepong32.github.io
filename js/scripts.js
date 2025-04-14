@@ -36,12 +36,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
 // Get the social icons container
 const socialIcons = document.querySelector('.social-icons');
-const stickySocialIcons = document.createElement('div');
-stickySocialIcons.classList.add('sticky-social-icons');
-
-// Clone the social icons into the sticky container
-stickySocialIcons.innerHTML = socialIcons.innerHTML;
-document.body.appendChild(stickySocialIcons);
+const stickySocialIcons = document.querySelector('.sticky-social-icons');
 
 // Function to handle scroll event
 window.addEventListener('scroll', () => {
