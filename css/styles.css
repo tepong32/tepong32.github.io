@@ -6185,6 +6185,12 @@ textarea.form-control-lg {
   text-align: center;
 }
 
+.carousel-caption h5 {
+  color: #ffc720;
+}
+
+
+
 .carousel-dark .carousel-control-prev-icon,
 .carousel-dark .carousel-control-next-icon {
   filter: invert(1) grayscale(100);
