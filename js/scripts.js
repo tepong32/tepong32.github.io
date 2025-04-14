@@ -32,3 +32,23 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+
+// Get the social icons container
+const socialIcons = document.querySelector('.social-icons');
+const stickySocialIcons = document.createElement('div');
+stickySocialIcons.classList.add('sticky-social-icons');
+
+// Clone the social icons into the sticky container
+stickySocialIcons.innerHTML = socialIcons.innerHTML;
+document.body.appendChild(stickySocialIcons);
+
+// Function to handle scroll event
+window.addEventListener('scroll', () => {
+    const rect = socialIcons.getBoundingClientRect();
+    if (rect.bottom < 0) {
+        stickySocialIcons.classList.add('show'); // Add class to show sticky icons
+    } else {
+        stickySocialIcons.classList.remove('show'); // Remove class to hide sticky icons
+    }
+});

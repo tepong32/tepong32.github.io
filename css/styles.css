@@ -11576,7 +11576,9 @@ h1, h2, h3 {
   }
 }
 
-/* skills icon */
+
+/* ################################################################################# */
+/* Skills icon */
 /* Hover Effects for Font Awesome Icons in Skills Section */
 .dev-icons .list-inline-item {
   transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for scaling and color */
@@ -11585,4 +11587,55 @@ h1, h2, h3 {
 .dev-icons .list-inline-item:hover {
   transform: scale(1.2); /* Scale up the icon */
   color: #0056b3; /* Change color on hover */
+}
+
+.carousel-item img {
+    height: 400px; /* Adjust height as needed */
+    object-fit: cover; /* Ensures the image covers the area */
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+    color: white; /* Text color */
+    padding: 10px; /* Padding for the caption */
+}
+
+.sticky-social-icons {
+    position: fixed;
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    z-index: 1000; /* Ensure it stays on top */
+    display: none; /* Initially hidden */
+    background-color: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding around icons */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateY(-10px); /* Start slightly above */
+}
+
+.sticky-social-icons.show {
+    display: block; /* Show the sticky icons */
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Move to original position */
+}
+
+.sticky-social-icons a {
+    display: block;
+    margin-bottom: 10px; /* Space between icons */
+    font-size: 24px; /* Icon size */
+    color: #000; /* Icon color */
+}
+
+.sticky-social-icons a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .sticky-social-icons {
+        top: 70px; /* Adjust this value to be below the navbar */
+        right: 10px; /* Adjust as needed */
+    }
 }
