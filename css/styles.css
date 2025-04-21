@@ -11597,7 +11597,8 @@ h1, h2, h3 {
 }
 
 .carousel-item img {
-    height: 400px; /* Adjust height as needed */
+    height: 350px; /* Adjust as needed */
+    width: 100%; /* Adjust as needed */
     object-fit: cover; /* Ensures the image covers the area */
 }
 
