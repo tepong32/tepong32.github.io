@@ -126,10 +126,10 @@
 
 
 body {
-	background: #07252d;
+	/*background: #07252d;*/
 }
 .banner-container {
-    /*background: #07252d;*/
+    background: #07252d;
     padding: 20px 0;
     text-align: center;
 }
