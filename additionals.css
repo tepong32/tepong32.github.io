@@ -123,11 +123,7 @@
 
 
 
-
-
-body {
-	/*background: #07252d;*/
-}
+/*Tubelight Effects*/
 .banner-container {
     background: #07252d;
     padding: 20px 0;
@@ -135,18 +131,18 @@ body {
 }
 
 .banner-container h2 {
-    position: absolute;
-    font-family: "Eagle Lake", serif;
+  position: relative;
+  font-family: "Eagle Lake", serif;
 	font-weight: 400;
 	font-style: normal;
-    font-size: 3em; /* smaller for banner */
-    letter-spacing: 10px;
-    color: #0e3742;
-    /*text-transform: uppercase;*/
-    -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
-    line-height: 0.9em;
-    outline: none;
-    animation: tubelight 5s linear infinite;
+  font-size: 3em; /* smaller for banner */
+  letter-spacing: 10px;
+  color: #0e3742;
+  /*text-transform: uppercase;*/
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+  line-height: 0.9em;
+  outline: none;
+  animation: tubelight 5s linear infinite;
 }
 
 @keyframes tubelight {
@@ -165,10 +161,17 @@ body {
     }
 }
 
-.navbar {
-	display: flex;
-	align-items: center;
-	width: 100%;
-	border: 5px solid greenyellow;
-	margin-left: 20%;
+/*PDF preview*/
+.pdf-preview {
+    position: relative; /* Position relative for overlay */
+    margin-left: 15px; /* Space between social icons and PDF preview */
+}
+
+.pdf-preview embed {
+    border-radius: 5px; /* Rounded corners for the PDF preview */
+    display: block; /* Ensure it behaves like a block element */
+}
+.pdf-preview:hover .download-overlay {
+    opacity: 1; /* Show overlay on hover */
+    pointer-events: auto; /* Allow interaction when visible */
 }
