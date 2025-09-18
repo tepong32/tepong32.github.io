@@ -170,8 +170,13 @@
 .pdf-preview embed {
     border-radius: 5px; /* Rounded corners for the PDF preview */
     display: block; /* Ensure it behaves like a block element */
+    height: 630px;
 }
 .pdf-preview:hover .download-overlay {
     opacity: 1; /* Show overlay on hover */
     pointer-events: auto; /* Allow interaction when visible */
+}
+
+.social-icon {
+  letter-spacing: 1rem;
 }
