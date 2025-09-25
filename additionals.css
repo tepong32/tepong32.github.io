@@ -125,8 +125,8 @@
 
 /*Tubelight Effects*/
 .banner-container {
-    background: #07252d;
-    padding: 20px 0;
+    background: var(--bs-light, #f8f9fa);
+    padding: 1.5rem 0;
     text-align: center;
 }
 
@@ -161,22 +161,60 @@
     }
 }
 
+/* Default: sticky top for navbar */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+/* Mobile: sticky bottom for navbar */
+@media (max-width: 767.98px) {
+    .sticky-nav {
+        top: auto !important;
+        bottom: 0;
+        position: sticky;
+        border-top: 1px solid #dee2e6;
+        box-shadow: 0 -2px 8px rgba(0,0,0,0.03);
+        background: var(--bs-body-bg, #fff);
+    }
+    .navbar {
+        border-radius: 0 !important;
+    }
+}
+			
+
+
+
 /*PDF preview*/
 .pdf-preview {
-    position: relative; /* Position relative for overlay */
-    margin-left: 15px; /* Space between social icons and PDF preview */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
 }
+  
+  @media (max-width: 767.98px) {
+      .pdf-preview embed {
+          width: 100% !important;
+          height: 350px !important;
+      }
+      .container.border {
+          border-width: 2px !important;
+      }
+      .banner-container h2 img {
+          width: 36px;
+          height: 36px;
+      }
+  }
 
-.pdf-preview embed {
-    border-radius: 5px; /* Rounded corners for the PDF preview */
-    display: block; /* Ensure it behaves like a block element */
-    height: 630px;
+.social-icon a
+{
+    font-size: 1.5rem;
+    letter-spacing: 1rem;
+    margin-left: 1rem;
+    color: #333;
+    transition: color 0.2s;
 }
-.pdf-preview:hover .download-overlay {
-    opacity: 1; /* Show overlay on hover */
-    pointer-events: auto; /* Allow interaction when visible */
-}
-
-.social-icon {
-  letter-spacing: 1rem;
+.social-icon a:hover {
+    color: #0d6efd;
 }
