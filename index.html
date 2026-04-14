@@ -1,237 +1,189 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Test Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/smile.png" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cristino Agapito Jr | GovTech Systems Builder</title>
+  <meta name="description" content="GovTech-focused Django Developer and workflow automation builder creating practical systems for LGU operations and citizen services.">
+  <link rel="icon" type="image/x-icon" href="assets/img/smile.png">
 
-    <!-- Bootstrap 5.3.8 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- adminlte4 -->
-    <link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/admin-lte@4.0.0-rc3/dist/css/adminlte.min.css" crossorigin="anonymous"/>
-
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
-    
-    <!-- custom/additional css -->
-    <link href="additionals.css" rel="stylesheet" />
-
-    <style>
-        
-    </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link href="portfolio-refresh.css" rel="stylesheet">
 </head>
 <body>
-    <div class="banner-container">
-        <h2>
-        	<img src="assets/img/smile.png" alt="Bootstrap" width="50" height="50">
-        	tEppy™
-        </h2>
-    </div>
-
-    <!-- Add sticky-nav class for sticky top/bottom behavior -->
-    <nav class="navbar navbar-expand-md navbar-light bg-body sticky-nav">
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <header class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg" aria-label="Primary navigation">
+      <div class="container">
+        <a class="navbar-brand" href="#home">
+          <img src="assets/img/smile.png" alt="Portfolio logo" width="30" height="30">
+          <span>Cristino Agapito Jr</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-
-          	<!-- sidebar toggler /// not needed ATM -->
-            <!-- <li class="nav-item">
-              <a class="nav-link" data-lte-toggle="sidebar" href="#" role="button"><i class="bi bi-list"></i></a>
-            </li> -->
-            
-            <li class="nav-item">
-              <a href="#" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="index2.html" class="nav-link">About tEppy</a>
-            </li>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#journal">Engineering Journal</a></li>
+            <li class="nav-item"><a class="nav-link" href="#cv">CV</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
           </ul>
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item dropdown">
-                <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
-                  <span class="theme-icon-active">
-                    <i class="my-1"></i>
-                  </span>
-                  <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text" style="--bs-dropdown-min-width: 8rem;">
-                  <li>
-                    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="light" aria-pressed="false">
-                      <i class="bi bi-sun-fill me-2"></i> Light
-                      <i class="bi bi-check-lg ms-auto d-none"></i>
-                    </button>
-                  </li>
-                  <li>
-                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                      <i class="bi bi-moon-fill me-2"></i> Dark
-                      <i class="bi bi-check-lg ms-auto d-none"></i>
-                    </button>
-                  </li>
-                  <li>
-                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="true">
-                      <i class="bi bi-circle-fill-half-stroke me-2"></i> Auto
-                      <i class="bi bi-check-lg ms-auto d-none"></i>
-                    </button>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <p class="eyebrow">GovTech-focused Django Developer | Workflow Automation Builder | LGU Systems Process Specialist</p>
+            <h1>Building practical systems for government workflows, internal operations, and real-world citizen services.</h1>
+            <p class="hero-lead">I design and ship process-aware software with clear operational impact for local government teams. Current focus: transforming municipal tracing and assistance workflows into reliable digital systems.</p>
+            <div class="hero-actions">
+              <a class="btn btn-accent" href="#projects">View Projects</a>
+              <a class="btn btn-outline-light" href="tracepoint.html">Explore TracePoint</a>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <aside class="status-card" aria-label="Current focus">
+              <p class="badge-label">Active Build</p>
+              <h2>Currently building TracePoint</h2>
+              <p>A case-driven platform for LGU process tracking, citizen assistance visibility, and workflow accountability.</p>
+              <span class="milestone-badge">Milestone: Core Workflow Foundation</span>
+            </aside>
           </div>
         </div>
-      </nav>
+      </div>
+    </section>
 
-
-    <!-- content body -->
-    <div class="container border border-success border-5">
-        <section id="pdf">
-            <div class="pdf-preview">
-                <embed src="assets/teppy.pdf" type="application/pdf" width="400px" height="500px" />
-                <!-- <a href="assets/teppy.pdf" download class="download-overlay">Download</a> -->
+    <section id="about" class="content-section">
+      <div class="container">
+        <header class="section-header">
+          <h2>About</h2>
+          <p>Systems builder mindset, grounded in practical implementation.</p>
+        </header>
+        <div class="row g-4">
+          <div class="col-lg-7">
+            <p>I am Cristino Agapito Jr, a developer focused on modernizing public service operations through clear process design and maintainable software architecture. My work combines Django-based backend development with field-informed workflow design.</p>
+            <p>I prioritize traceability, low-friction usability, and deployment-ready solutions that can adapt to policy, personnel, and operational realities in LGU environments.</p>
+          </div>
+          <div class="col-lg-5">
+            <div class="info-panel">
+              <h3>Core strengths</h3>
+              <ul>
+                <li>Django-first web application development</li>
+                <li>Workflow mapping and process automation</li>
+                <li>Internal operations tooling for government teams</li>
+                <li>Documentation and maintainable handover practices</li>
+              </ul>
             </div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <section id="mid">
-            mid section
+    <section id="projects" class="content-section section-dark">
+      <div class="container">
+        <header class="section-header">
+          <h2>Featured Projects</h2>
+          <p>Focused builds with operational outcomes and practical deployment intent.</p>
+        </header>
 
+        <article class="feature-card">
+          <div>
+            <p class="project-tag">Featured Active Project</p>
+            <h3>TracePoint</h3>
+            <p>TracePoint is under active development to digitize case movement, improve visibility across LGU offices, and support accountable decision-making through audit-friendly process logs.</p>
+            <ul class="feature-list">
+              <li>Case lifecycle tracking and status transparency</li>
+              <li>Structured routing for inter-office coordination</li>
+              <li>Foundation prepared for role-based access in Django</li>
+            </ul>
+          </div>
+          <a class="btn btn-accent align-self-start" href="tracepoint.html">Open Project Brief</a>
+        </article>
 
-            <div class="social-icon">
-                <a href="https://linkedin.com/in/cristinoagapitojr" target="_blank"><i class="bi bi-linkedin float-end"></i></a>
-                <a href="https://github.com/tepong32" target="_blank"><i class="bi bi-github float-end"></i></a>
-                <a href="https://twitter.com/tepongdgreat" target="_blank"><i class="bi bi-twitter float-end"></i></a>
-                <a href="https://facebook.com/tepong32" target="_blank"><i class="bi bi-facebook float-end"></i></a>
-            </div>
-        </section>
+        <div class="row g-4 project-grid">
+          <div class="col-md-6 col-xl-4">
+            <article class="project-card h-100">
+              <h3>Excel Workflow Automation Toolkit</h3>
+              <p>Automation templates and scripts that reduce repetitive encoding, standardize forms, and improve reporting turnaround for internal operations.</p>
+              <span class="milestone-badge">Milestone: Operational Toolkit</span>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="project-card h-100">
+              <h3>Legacy LGU Assistance Learnings</h3>
+              <p>A synthesis of field learnings from manual assistance workflows, including bottleneck analysis and transition recommendations for digital migration.</p>
+              <span class="milestone-badge">Milestone: Lessons Archive</span>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="project-card h-100">
+              <h3>Operations Documentation Framework</h3>
+              <p>Process documentation structure designed for continuity, onboarding, and future system integration across offices and stakeholder teams.</p>
+              <span class="milestone-badge">Milestone: Documentation Baseline</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section id="journal" class="content-section">
+      <div class="container">
+        <header class="section-header">
+          <h2>Engineering Journal</h2>
+          <p>Build reflections from active systems work.</p>
+        </header>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <article class="journal-entry h-100">
+              <h3>Designing for process reality, not just ideal flow</h3>
+              <p>I map administrative bottlenecks first, then implement software that respects actual office behavior. This avoids fragile systems that fail under real-world exceptions.</p>
+            </article>
+          </div>
+          <div class="col-md-6">
+            <article class="journal-entry h-100">
+              <h3>Making auditability a default feature</h3>
+              <p>Reliable public systems need trace logs and clear ownership transitions. I treat audit trails as a core requirement, not a later enhancement.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section id="cv" class="content-section section-dark">
+      <div class="container">
+        <header class="section-header">
+          <h2>Resume / CV</h2>
+          <p>Download the latest profile for roles in GovTech software and operations-focused engineering.</p>
+        </header>
+        <a class="btn btn-accent" href="assets/teppy.pdf" download>
+          <i class="bi bi-download me-2" aria-hidden="true"></i>Download CV (PDF)
+        </a>
+      </div>
+    </section>
+  </main>
 
-    </div> <!--  body content -->
+  <footer id="contact" class="site-footer">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Let’s collaborate on practical government systems and internal process modernization.</p>
+      <ul class="contact-list">
+        <li><a href="https://github.com/tepong32" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub</a></li>
+        <li><a href="mailto:cristinoagapitojr@gmail.com"><i class="bi bi-envelope"></i> cristinoagapitojr@gmail.com</a></li>
+        <li><a href="https://tepong32.github.io" target="_blank" rel="noopener noreferrer"><i class="bi bi-globe"></i> Portfolio</a></li>
+      </ul>
+      <p class="copyright">© <span id="year"></span> Cristino Agapito Jr. Built as static HTML/CSS for GitHub Pages, structured for future Django and Vue component migration.</p>
+    </div>
+  </footer>
 
-
-
-    <!-- Jquery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Bootstrap 5 -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
-    <!-- adminlte4 -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/admin-lte@4.0.0-rc3/dist/js/adminlte.min.js"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- custom -->
-    <script>
-        // Color Mode Toggler
-    (() => {
-      "use strict";
-
-      const storedTheme = localStorage.getItem("theme");
-
-      const getPreferredTheme = () => {
-        if (storedTheme) {
-          return storedTheme;
-        }
-
-        return window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? "dark"
-          : "light";
-      };
-
-      const setTheme = function (theme) {
-        if (
-          theme === "auto" &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches
-        ) {
-          document.documentElement.setAttribute("data-bs-theme", "dark");
-        } else {
-          document.documentElement.setAttribute("data-bs-theme", theme);
-        }
-      };
-
-      setTheme(getPreferredTheme());
-
-      const showActiveTheme = (theme, focus = false) => {
-        const themeSwitcher = document.querySelector("#bd-theme");
-
-        if (!themeSwitcher) {
-          return;
-        }
-
-        const themeSwitcherText = document.querySelector("#bd-theme-text");
-        const activeThemeIcon = document.querySelector(".theme-icon-active i");
-        const btnToActive = document.querySelector(
-          `[data-bs-theme-value="${theme}"]`
-        );
-        const svgOfActiveBtn = btnToActive.querySelector("i").getAttribute("class");
-
-        for (const element of document.querySelectorAll("[data-bs-theme-value]")) {
-          element.classList.remove("active");
-          element.setAttribute("aria-pressed", "false");
-        }
-
-        btnToActive.classList.add("active");
-        btnToActive.setAttribute("aria-pressed", "true");
-        activeThemeIcon.setAttribute("class", svgOfActiveBtn);
-        const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.bsThemeValue})`;
-        themeSwitcher.setAttribute("aria-label", themeSwitcherLabel);
-
-        if (focus) {
-          themeSwitcher.focus();
-        }
-      };
-
-      window
-        .matchMedia("(prefers-color-scheme: dark)")
-        .addEventListener("change", () => {
-          if (storedTheme !== "light" || storedTheme !== "dark") {
-            setTheme(getPreferredTheme());
-          }
-        });
-
-      window.addEventListener("DOMContentLoaded", () => {
-        showActiveTheme(getPreferredTheme());
-
-        for (const toggle of document.querySelectorAll("[data-bs-theme-value]")) {
-          toggle.addEventListener("click", () => {
-            const theme = toggle.getAttribute("data-bs-theme-value");
-            localStorage.setItem("theme", theme);
-            setTheme(theme);
-            showActiveTheme(theme, true);
-          });
-        }
-      });
-    })();
-    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="js/portfolio-refresh.js"></script>
 </body>
 </html>
