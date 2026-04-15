@@ -44,27 +44,10 @@
             <p class="eyebrow">GovTech-focused Django Developer | Workflow Automation Builder | LGU Systems Process Specialist</p>
             <h1>Building practical systems for government workflows, internal operations, and real-world citizen services.</h1>
             <p class="hero-lead">I design and ship process-aware software with clear operational impact for local government teams. Current focus: transforming municipal tracing and assistance workflows into reliable digital systems.</p>
-            <div class="credibility-strip" role="list" aria-label="Credibility metrics">
-              <div class="credibility-item" role="listitem">
-                <p class="credibility-value">18+ workflows mapped</p>
-                <p class="credibility-label">Across assistance, routing, and case-tracing operations</p>
-              </div>
-              <div class="credibility-item" role="listitem">
-                <p class="credibility-value">34 hours/month reduced</p>
-                <p class="credibility-label">Through repeatable automation and standardized templates</p>
-              </div>
-              <div class="credibility-item" role="listitem">
-                <p class="credibility-value">3 pilot modules delivered</p>
-                <p class="credibility-label">Focused on intake, status visibility, and documentation</p>
-              </div>
-              <div class="credibility-item" role="listitem">
-                <p class="credibility-value">Audit trail readiness: implemented</p>
-                <p class="credibility-label">Event logs and handover notes built into process flow</p>
-              </div>
-            </div>
-            <div class="hero-actions">
-              <a class="btn btn-accent" href="#projects">View Projects</a>
-              <a class="btn btn-outline-light" href="tracepoint.html">Explore TracePoint</a>
+            <div class="hero-actions cta-group" aria-label="Primary calls to action">
+              <a class="btn cta-btn cta-primary" href="#contact">Book a Systems Consultation</a>
+              <a class="btn cta-btn cta-secondary" href="#projects">Request Portfolio Walkthrough</a>
+              <a class="cta-tertiary" href="assets/teppy.pdf" download>Download CV</a>
             </div>
           </div>
           <div class="col-lg-4">
@@ -79,7 +62,7 @@
       </div>
     </section>
 
-    <section id="about" class="content-section">
+    <section id="about" class="content-section section--proof">
       <div class="container">
         <header class="section-header">
           <h2>About</h2>
@@ -105,6 +88,65 @@
       </div>
     </section>
 
+    <section id="build-systems" class="content-section">
+      <div class="container">
+        <header class="section-header">
+          <h2>How I Build Systems (AI-assisted, engineer-directed)</h2>
+          <p>A disciplined workflow that keeps human engineering judgment accountable at every stage.</p>
+        </header>
+
+        <div class="trust-block">
+          <ol class="workflow-timeline" aria-label="Five-step system build workflow">
+            <li class="timeline-step">
+              <span class="step-number">1</span>
+              <div>
+                <h3>Process discovery and constraint mapping</h3>
+                <p>I document operational realities, policy constraints, stakeholder responsibilities, and data boundaries before any build starts.</p>
+              </div>
+            </li>
+            <li class="timeline-step">
+              <span class="step-number">2</span>
+              <div>
+                <h3>Solution framing and architecture decisions</h3>
+                <p>I choose architecture and integration paths based on maintainability, clarity of ownership, and realistic deployment conditions.</p>
+              </div>
+            </li>
+            <li class="timeline-step">
+              <span class="step-number">3</span>
+              <div>
+                <h3>AI-assisted drafting/prototyping</h3>
+                <p>I use AI to accelerate draft generation and prototyping while keeping design control, code intent, and acceptance criteria engineer-led.</p>
+              </div>
+            </li>
+            <li class="timeline-step">
+              <span class="step-number">4</span>
+              <div>
+                <h3>Human validation, edge-case hardening, and documentation</h3>
+                <p>I validate behavior against edge cases, harden workflows for operational exceptions, and prepare handover-ready technical documentation.</p>
+              </div>
+            </li>
+            <li class="timeline-step">
+              <span class="step-number">5</span>
+              <div>
+                <h3>Deployment readiness and handover</h3>
+                <p>I finalize deployment checklists, accountability mapping, and support expectations so teams can run the system with confidence.</p>
+              </div>
+            </li>
+          </ol>
+
+          <div class="trust-principles">
+            <h3>Trust Principles</h3>
+            <ul>
+              <li><i class="bi bi-check2-circle" aria-hidden="true"></i>Traceability</li>
+              <li><i class="bi bi-check2-circle" aria-hidden="true"></i>Maintainability</li>
+              <li><i class="bi bi-check2-circle" aria-hidden="true"></i>Data responsibility</li>
+              <li><i class="bi bi-check2-circle" aria-hidden="true"></i>Auditability</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="projects" class="content-section section-dark">
       <div class="container">
         <header class="section-header">
@@ -116,12 +158,25 @@
           <div>
             <p class="project-tag">Featured Active Project</p>
             <h3>TracePoint</h3>
-            <p>TracePoint is under active development to digitize case movement, improve visibility across LGU offices, and support accountable decision-making through audit-friendly process logs.</p>
-            <ul class="feature-list">
-              <li>Case lifecycle tracking and status transparency</li>
-              <li>Structured routing for inter-office coordination</li>
-              <li>Foundation prepared for role-based access in Django</li>
-            </ul>
+            <p class="case-label">1. Context / Problem</p>
+            <p>TracePoint addresses fragmented case handling in LGU workflows where manual handoffs and siloed logs create delays, weak visibility, and inconsistent accountability.</p>
+            <p class="case-label">2. System / Architecture approach</p>
+            <p>The platform uses a modular Django workflow core for case intake, routing, status transitions, and office-level views, designed for gradual integration with role-based access and reporting modules.</p>
+            <p class="case-label">TracePoint architecture snapshot</p>
+            <dl class="case-meta">
+              <dt>Actors</dt>
+              <dd>Frontline encoders, receiving offices, reviewers, and decision-makers.</dd>
+              <dt>Core modules</dt>
+              <dd>Case registry, routing queue, status timeline, and operational dashboard.</dd>
+              <dt>Data / events tracked</dt>
+              <dd>Intake timestamps, assignment transitions, action notes, status changes, and resolution checkpoints.</dd>
+              <dt>Governance / audit considerations</dt>
+              <dd>Immutable transition history, role-aligned permissions, and evidence-ready activity logs.</dd>
+            </dl>
+            <p class="case-label">3. Constraints handled</p>
+            <p>Designed to align with policy changes, office-specific process variations, mixed digital maturity of users, and uneven source-data quality from paper-origin records.</p>
+            <p class="case-label">4. Outcome / expected operational impact</p>
+            <p>Expected outcomes include faster case turnaround, clearer cross-office ownership, and stronger audit readiness for service delivery oversight.</p>
           </div>
           <a class="btn btn-accent align-self-start" href="tracepoint.html">Open Project Brief</a>
         </article>
@@ -130,21 +185,42 @@
           <div class="col-md-6 col-xl-4">
             <article class="project-card h-100">
               <h3>Excel Workflow Automation Toolkit</h3>
-              <p>Automation templates and scripts that reduce repetitive encoding, standardize forms, and improve reporting turnaround for internal operations.</p>
+              <p class="case-label">1. Context / Problem</p>
+              <p>Internal teams spent significant time on repetitive encoding and manual consolidation of recurring reports.</p>
+              <p class="case-label">2. System / Architecture approach</p>
+              <p>Built reusable spreadsheet templates and automation scripts with controlled input zones and output-ready summary sheets.</p>
+              <p class="case-label">3. Constraints handled</p>
+              <p>Configured for existing office approval routines, varied staff tool proficiency, and inconsistent source entries across units.</p>
+              <p class="case-label">4. Outcome / expected operational impact</p>
+              <p>Improves report preparation speed, reduces encoding errors, and standardizes internal document outputs.</p>
               <span class="milestone-badge">Milestone: Operational Toolkit</span>
             </article>
           </div>
           <div class="col-md-6 col-xl-4">
             <article class="project-card h-100">
               <h3>Legacy LGU Assistance Learnings</h3>
-              <p>A synthesis of field learnings from manual assistance workflows, including bottleneck analysis and transition recommendations for digital migration.</p>
+              <p class="case-label">1. Context / Problem</p>
+              <p>Manual assistance workflows lacked unified visibility, producing repeated verification work and delayed service completion.</p>
+              <p class="case-label">2. System / Architecture approach</p>
+              <p>Compiled field observations into a structured learning archive with process maps, bottleneck patterns, and migration-ready requirements.</p>
+              <p class="case-label">3. Constraints handled</p>
+              <p>Captured policy-dependent process steps, human handoff patterns, and reliability issues from handwritten or partial records.</p>
+              <p class="case-label">4. Outcome / expected operational impact</p>
+              <p>Provides a decision baseline for phased digital transition planning and lowers implementation risk for new systems.</p>
               <span class="milestone-badge">Milestone: Lessons Archive</span>
             </article>
           </div>
           <div class="col-md-6 col-xl-4">
             <article class="project-card h-100">
               <h3>Operations Documentation Framework</h3>
-              <p>Process documentation structure designed for continuity, onboarding, and future system integration across offices and stakeholder teams.</p>
+              <p class="case-label">1. Context / Problem</p>
+              <p>Critical operational knowledge was distributed across teams, making onboarding and continuity highly dependent on individual memory.</p>
+              <p class="case-label">2. System / Architecture approach</p>
+              <p>Designed a standardized documentation framework combining workflow narratives, role responsibilities, and integration touchpoints.</p>
+              <p class="case-label">3. Constraints handled</p>
+              <p>Structured for policy updates, approval-chain changes, and cross-office coordination with varying levels of process formalization.</p>
+              <p class="case-label">4. Outcome / expected operational impact</p>
+              <p>Strengthens institutional memory, accelerates staff ramp-up, and improves readiness for future platform integration.</p>
               <span class="milestone-badge">Milestone: Documentation Baseline</span>
             </article>
           </div>
@@ -152,7 +228,7 @@
       </div>
     </section>
 
-    <section id="journal" class="content-section">
+    <section id="journal" class="content-section section--insights">
       <div class="container">
         <header class="section-header">
           <h2>Engineering Journal</h2>
@@ -175,7 +251,7 @@
       </div>
     </section>
 
-    <section id="cv" class="content-section section-dark">
+    <section id="cv" class="content-section section-dark section--proof">
       <div class="container">
         <header class="section-header">
           <h2>Resume / CV</h2>
@@ -192,6 +268,59 @@
     <div class="container">
       <h2>Contact</h2>
       <p>Let’s collaborate on practical government systems and internal process modernization.</p>
+
+      <div class="cta-group footer-cta-group" aria-label="Contact calls to action">
+        <a class="btn cta-btn cta-primary" href="mailto:cristinoagapitojr@gmail.com?subject=Systems%20Consultation%20Request">Book a Systems Consultation</a>
+        <a class="btn cta-btn cta-secondary" href="mailto:cristinoagapitojr@gmail.com?subject=Portfolio%20Walkthrough%20Request">Request Portfolio Walkthrough</a>
+        <a class="cta-tertiary" href="assets/teppy.pdf" download>Download CV</a>
+      </div>
+
+      <div class="contact-prompt" role="form" aria-label="Project inquiry prompt">
+        <h3>Project Inquiry Snapshot</h3>
+        <p>Share these details in your email so I can prepare a targeted response:</p>
+        <form class="inquiry-form" action="mailto:cristinoagapitojr@gmail.com" method="post" enctype="text/plain">
+          <div class="inquiry-grid">
+            <label>
+              Scope
+              <select name="Scope" required>
+                <option value="" selected disabled>Select scope</option>
+                <option>New build</option>
+                <option>Modernization / migration</option>
+                <option>Workflow automation enhancement</option>
+              </select>
+            </label>
+            <label>
+              Timeline
+              <select name="Timeline" required>
+                <option value="" selected disabled>Select timeline</option>
+                <option>2–4 weeks</option>
+                <option>1–2 months</option>
+                <option>3+ months</option>
+              </select>
+            </label>
+            <label>
+              Office type
+              <select name="Office Type" required>
+                <option value="" selected disabled>Select office type</option>
+                <option>Municipal / city office</option>
+                <option>Provincial office</option>
+                <option>Inter-office / multi-unit team</option>
+              </select>
+            </label>
+            <label>
+              Challenge area
+              <select name="Challenge Area" required>
+                <option value="" selected disabled>Select challenge area</option>
+                <option>Case tracking visibility</option>
+                <option>Routing and approvals</option>
+                <option>Reporting and audit logs</option>
+              </select>
+            </label>
+          </div>
+          <button class="btn cta-btn cta-secondary inquiry-submit" type="submit">Send Inquiry Details</button>
+        </form>
+      </div>
+
       <ul class="contact-list">
         <li><a href="https://github.com/tepong32" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub</a></li>
         <li><a href="mailto:cristinoagapitojr@gmail.com"><i class="bi bi-envelope"></i> cristinoagapitojr@gmail.com</a></li>
