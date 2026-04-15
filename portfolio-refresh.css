@@ -590,4 +590,8 @@ footer p {
   .step-number {
     margin-top: 0;
   }
+
+  .case-meta {
+    grid-template-columns: 1fr;
+  }
 }
