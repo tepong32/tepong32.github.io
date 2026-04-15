@@ -178,6 +178,39 @@ footer p {
   color: var(--text-muted);
 }
 
+.case-label {
+  margin: 0.85rem 0 0.3rem;
+  color: #9ec6ef;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.case-meta {
+  margin: 0.65rem 0 0.85rem;
+  padding: 0.75rem;
+  border: 1px solid rgba(126, 189, 255, 0.3);
+  border-radius: 0.7rem;
+  background: rgba(13, 24, 41, 0.72);
+  display: grid;
+  grid-template-columns: minmax(120px, 165px) 1fr;
+  gap: 0.4rem 0.85rem;
+}
+
+.case-meta dt {
+  margin: 0;
+  color: #cde7ff;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.case-meta dd {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.84rem;
+}
+
 .site-footer {
   padding: 3.2rem 0;
   background: #050a14;
@@ -224,5 +257,9 @@ footer p {
 
   .hero-actions .btn {
     width: 100%;
+  }
+
+  .case-meta {
+    grid-template-columns: 1fr;
   }
 }

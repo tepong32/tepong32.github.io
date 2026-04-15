@@ -98,12 +98,25 @@
           <div>
             <p class="project-tag">Featured Active Project</p>
             <h3>TracePoint</h3>
-            <p>TracePoint is under active development to digitize case movement, improve visibility across LGU offices, and support accountable decision-making through audit-friendly process logs.</p>
-            <ul class="feature-list">
-              <li>Case lifecycle tracking and status transparency</li>
-              <li>Structured routing for inter-office coordination</li>
-              <li>Foundation prepared for role-based access in Django</li>
-            </ul>
+            <p class="case-label">1. Context / Problem</p>
+            <p>TracePoint addresses fragmented case handling in LGU workflows where manual handoffs and siloed logs create delays, weak visibility, and inconsistent accountability.</p>
+            <p class="case-label">2. System / Architecture approach</p>
+            <p>The platform uses a modular Django workflow core for case intake, routing, status transitions, and office-level views, designed for gradual integration with role-based access and reporting modules.</p>
+            <p class="case-label">TracePoint architecture snapshot</p>
+            <dl class="case-meta">
+              <dt>Actors</dt>
+              <dd>Frontline encoders, receiving offices, reviewers, and decision-makers.</dd>
+              <dt>Core modules</dt>
+              <dd>Case registry, routing queue, status timeline, and operational dashboard.</dd>
+              <dt>Data / events tracked</dt>
+              <dd>Intake timestamps, assignment transitions, action notes, status changes, and resolution checkpoints.</dd>
+              <dt>Governance / audit considerations</dt>
+              <dd>Immutable transition history, role-aligned permissions, and evidence-ready activity logs.</dd>
+            </dl>
+            <p class="case-label">3. Constraints handled</p>
+            <p>Designed to align with policy changes, office-specific process variations, mixed digital maturity of users, and uneven source-data quality from paper-origin records.</p>
+            <p class="case-label">4. Outcome / expected operational impact</p>
+            <p>Expected outcomes include faster case turnaround, clearer cross-office ownership, and stronger audit readiness for service delivery oversight.</p>
           </div>
           <a class="btn btn-accent align-self-start" href="tracepoint.html">Open Project Brief</a>
         </article>
@@ -112,21 +125,42 @@
           <div class="col-md-6 col-xl-4">
             <article class="project-card h-100">
               <h3>Excel Workflow Automation Toolkit</h3>
-              <p>Automation templates and scripts that reduce repetitive encoding, standardize forms, and improve reporting turnaround for internal operations.</p>
+              <p class="case-label">1. Context / Problem</p>
+              <p>Internal teams spent significant time on repetitive encoding and manual consolidation of recurring reports.</p>
+              <p class="case-label">2. System / Architecture approach</p>
+              <p>Built reusable spreadsheet templates and automation scripts with controlled input zones and output-ready summary sheets.</p>
+              <p class="case-label">3. Constraints handled</p>
+              <p>Configured for existing office approval routines, varied staff tool proficiency, and inconsistent source entries across units.</p>
+              <p class="case-label">4. Outcome / expected operational impact</p>
+              <p>Improves report preparation speed, reduces encoding errors, and standardizes internal document outputs.</p>
               <span class="milestone-badge">Milestone: Operational Toolkit</span>
             </article>
           </div>
           <div class="col-md-6 col-xl-4">
             <article class="project-card h-100">
               <h3>Legacy LGU Assistance Learnings</h3>
-              <p>A synthesis of field learnings from manual assistance workflows, including bottleneck analysis and transition recommendations for digital migration.</p>
+              <p class="case-label">1. Context / Problem</p>
+              <p>Manual assistance workflows lacked unified visibility, producing repeated verification work and delayed service completion.</p>
+              <p class="case-label">2. System / Architecture approach</p>
+              <p>Compiled field observations into a structured learning archive with process maps, bottleneck patterns, and migration-ready requirements.</p>
+              <p class="case-label">3. Constraints handled</p>
+              <p>Captured policy-dependent process steps, human handoff patterns, and reliability issues from handwritten or partial records.</p>
+              <p class="case-label">4. Outcome / expected operational impact</p>
+              <p>Provides a decision baseline for phased digital transition planning and lowers implementation risk for new systems.</p>
               <span class="milestone-badge">Milestone: Lessons Archive</span>
             </article>
           </div>
           <div class="col-md-6 col-xl-4">
             <article class="project-card h-100">
               <h3>Operations Documentation Framework</h3>
-              <p>Process documentation structure designed for continuity, onboarding, and future system integration across offices and stakeholder teams.</p>
+              <p class="case-label">1. Context / Problem</p>
+              <p>Critical operational knowledge was distributed across teams, making onboarding and continuity highly dependent on individual memory.</p>
+              <p class="case-label">2. System / Architecture approach</p>
+              <p>Designed a standardized documentation framework combining workflow narratives, role responsibilities, and integration touchpoints.</p>
+              <p class="case-label">3. Constraints handled</p>
+              <p>Structured for policy updates, approval-chain changes, and cross-office coordination with varying levels of process formalization.</p>
+              <p class="case-label">4. Outcome / expected operational impact</p>
+              <p>Strengthens institutional memory, accelerates staff ramp-up, and improves readiness for future platform integration.</p>
               <span class="milestone-badge">Milestone: Documentation Baseline</span>
             </article>
           </div>
