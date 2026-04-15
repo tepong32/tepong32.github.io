@@ -94,10 +94,113 @@ footer p {
 }
 
 .hero-actions {
+  margin-top: 1.4rem;
+}
+
+
+.cta-group {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 0.8rem;
   margin-top: 1.4rem;
+}
+
+.cta-btn {
+  border-radius: 0.7rem;
+  font-weight: 700;
+  padding: 0.65rem 1.05rem;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.cta-primary {
+  border: 1px solid transparent;
+  background: var(--accent);
+  color: #03111f;
+}
+
+.cta-primary:hover {
+  background: #67b8ff;
+  color: #03111f;
+  transform: translateY(-1px);
+}
+
+.cta-secondary {
+  border: 1px solid rgba(126, 189, 255, 0.65);
+  color: #d8ebff;
+  background: transparent;
+}
+
+.cta-secondary:hover {
+  border-color: #9ed0ff;
+  color: #f1f8ff;
+  background: rgba(62, 166, 255, 0.12);
+}
+
+.cta-tertiary {
+  color: #b9dfff;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-decoration-color: rgba(185, 223, 255, 0.55);
+  font-weight: 600;
+  padding: 0.35rem 0.2rem;
+}
+
+.cta-tertiary:hover {
+  color: #ffffff;
+  text-decoration-color: currentColor;
+}
+
+.cta-btn:focus-visible,
+.cta-tertiary:focus-visible,
+.inquiry-form select:focus-visible {
+  outline: 3px solid rgba(98, 188, 255, 0.62);
+  outline-offset: 2px;
+}
+
+.footer-cta-group {
+  margin-bottom: 1.2rem;
+}
+
+.contact-prompt {
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  padding: 1rem;
+  background: rgba(19, 31, 52, 0.76);
+  margin-bottom: 1.2rem;
+}
+
+.contact-prompt h3 {
+  margin-bottom: 0.45rem;
+  font-size: 1.08rem;
+}
+
+.inquiry-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 0.9rem 0;
+}
+
+.inquiry-form label {
+  display: grid;
+  gap: 0.38rem;
+  color: #d7e9ff;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.inquiry-form select {
+  width: 100%;
+  border-radius: 0.58rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(7, 12, 21, 0.92);
+  color: var(--text-primary);
+  padding: 0.55rem 0.65rem;
+}
+
+.inquiry-submit {
+  margin-top: 0.2rem;
 }
 
 .btn-accent {
@@ -222,7 +325,14 @@ footer p {
     padding: 3.4rem 0;
   }
 
-  .hero-actions .btn {
+  .cta-group .cta-btn,
+  .cta-group .cta-tertiary,
+  .inquiry-submit {
     width: 100%;
+    text-align: center;
+  }
+
+  .inquiry-grid {
+    grid-template-columns: 1fr;
   }
 }
