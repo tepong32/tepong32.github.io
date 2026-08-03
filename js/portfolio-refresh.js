@@ -27,20 +27,18 @@
       projects: [
         {
           name: 'TracePoint',
-          match: ['tracepoint', 'trace-point'],
-          problem: 'Supports lifecycle-driven government assistance workflows that need clearer intake, continuity, and staff accountability.',
-          audience: 'Public-facing citizens and secured role-based staff workflows.',
-          value: 'Keeps requests visible as lifecycle entities while reinforcing auditability, recoverability, and practical service continuity.',
-          technologies: ['Django', 'Python', 'Bootstrap']
+          repo: 'Tracepoint',
+          problem: 'Supports lifecycle-driven GovTech assistance workflows where public citizen continuity and secured staff handling both matter.',
+          audience: 'Citizens using public account-less workflows and staff using secured role-based workflows.',
+          value: 'Helps position assistance requests as auditable lifecycle entities instead of disconnected records.'
         },
         {
           name: 'GRAND',
+          repo: 'grand',
           note: 'Original prototype that eventually evolved into TracePoint.',
-          match: ['grand'],
-          problem: 'Explores earlier digital assistance workflow ideas for public service operations.',
-          audience: 'Government teams evaluating structured assistance and routing workflows.',
-          value: 'Preserves the prototype lineage behind the current TracePoint direction.',
-          technologies: ['Django', 'Python', 'Bootstrap']
+          problem: 'Captures the earlier prototype direction for digital government assistance workflows.',
+          audience: 'Government process improvement work that later informed the TracePoint direction.',
+          value: 'Shows the project lineage behind the current TracePoint platform without presenting the prototype as the current system.'
         }
       ]
     },
@@ -49,19 +47,17 @@
       projects: [
         {
           name: 'TraceSync',
-          match: ['tracesync', 'trace-sync'],
-          problem: 'Helps reduce repetitive desktop workflow steps around tracking and synchronization tasks.',
-          audience: 'Users who need practical desktop support for recurring operational work.',
-          value: 'Turns repeatable work into a more consistent utility-driven process.',
-          technologies: ['Python', 'Tkinter']
+          repo: 'TraceSync',
+          problem: 'Supports recurring desktop productivity work where repeatable tracking or synchronization tasks need a focused utility.',
+          audience: 'Users who need a lightweight desktop tool instead of a full web platform.',
+          value: 'Keeps operational support practical and close to the user workflow.'
         },
         {
           name: 'Excel Companion',
-          match: ['excel-companion', 'excelcompanion', 'excel_companion'],
-          problem: 'Assists with recurring spreadsheet preparation and data handling work.',
-          audience: 'Teams that rely on Excel for operational reports and working documents.',
-          value: 'Improves consistency in spreadsheet-based workflows without forcing a larger platform migration.',
-          technologies: ['Python', 'Excel', 'OpenPyXL']
+          repo: 'xl_tkinter',
+          problem: 'Supports spreadsheet-based work that benefits from a small desktop companion tool.',
+          audience: 'Users who rely on Excel and desktop workflows for recurring operational tasks.',
+          value: 'Improves spreadsheet workflow support while preserving familiar tools.'
         }
       ]
     },
@@ -69,20 +65,11 @@
       title: 'Accounting Automation',
       projects: [
         {
-          name: 'Accounting repository',
-          match: ['accounting'],
-          problem: 'Supports accounting-related automation and operational record workflows.',
-          audience: 'Users working with accounting files, reports, or repeatable back-office tasks.',
-          value: 'Applies an accuracy-focused accounting background to practical software automation.',
-          technologies: ['Python', 'Excel', 'Data Processing']
-        },
-        {
-          name: 'Payroll/reporting automation',
-          match: ['payroll', 'reporting', 'report'],
-          problem: 'Targets repetitive payroll or reporting preparation work.',
-          audience: 'Teams handling recurring payroll or internal reporting outputs.',
-          value: 'Reduces manual consolidation effort while keeping the presentation concise when repository details are unavailable.',
-          technologies: ['Python', 'Excel', 'OpenPyXL']
+          name: 'Accounting Payroll/reporting automation',
+          repo: 'acctgFiles',
+          problem: 'Supports accounting payroll or reporting work where repetitive file preparation can be automated.',
+          audience: 'Users handling recurring accounting, payroll, or reporting files.',
+          value: 'Applies accounting-aware software practice to reduce repetitive preparation work and support consistent outputs.'
         }
       ]
     }
@@ -92,50 +79,67 @@
     return value.toLowerCase().replace(/[^a-z0-9]/g, '');
   }
 
-  function findRepo(repos, project) {
-    const matches = project.match.map(normalize);
-    return repos.find((repo) => matches.includes(normalize(repo.name))) || repos.find((repo) => matches.some((match) => normalize(repo.name).includes(match)));
+  function repositoryUrl(project) {
+    return `https://github.com/${githubUser}/${project.repo}`;
   }
 
-  function repoDescription(repo) {
-    if (!repo) {
-      return 'Repository metadata is unavailable.';
+  function apiUrl(project) {
+    return `https://api.github.com/repos/${githubUser}/${project.repo}`;
+  }
+
+  function projectId(project) {
+    return normalize(`${project.name}-${project.repo}`);
+  }
+
+  function unavailableText(value, fallback) {
+    return value || fallback;
+  }
+
+  function technologyList(metadata) {
+    if (!metadata) {
+      return [];
     }
-    return repo.description || 'No repository description provided.';
+
+    const languageNames = Object.keys(metadata.languages || {});
+    const topicNames = metadata.repo && metadata.repo.topics ? metadata.repo.topics : [];
+    return Array.from(new Set([...languageNames, ...topicNames])).filter(Boolean);
   }
 
-  function repoLink(repo, project) {
-    if (repo) {
-      return repo.html_url;
-    }
-    return `https://github.com/${githubUser}?tab=repositories&q=${encodeURIComponent(project.name)}`;
+  function projectFromMetadata(project, metadata) {
+    const repo = metadata && metadata.repo ? metadata.repo : null;
+    return {
+      ...project,
+      description: repo ? unavailableText(repo.description, 'No repository description provided.') : 'Repository metadata is unavailable.',
+      htmlUrl: repo && repo.html_url ? repo.html_url : repositoryUrl(project),
+      homepage: repo && repo.homepage ? repo.homepage : '',
+      technologies: technologyList(metadata)
+    };
   }
 
-  function renderProjects(repos) {
+  function renderProjects(metadataByRepo) {
     projectCatalog.innerHTML = categories.map((category) => `
       <section class="project-category" aria-labelledby="${normalize(category.title)}">
         <h3 id="${normalize(category.title)}">${category.title}</h3>
         <div class="row g-4">
           ${category.projects.map((project) => {
-            const repo = findRepo(repos, project);
-            const homepage = repo && repo.homepage ? repo.homepage : '';
-            const language = repo && repo.language ? repo.language : '';
-            const technologies = Array.from(new Set([...project.technologies, language].filter(Boolean)));
+            const metadata = metadataByRepo[project.repo];
+            const renderedProject = projectFromMetadata(project, metadata);
+            const technologies = renderedProject.technologies.length ? renderedProject.technologies : ['Repository metadata unavailable'];
             return `
               <div class="col-md-6">
-                <article class="project-card h-100">
+                <article class="project-card h-100" id="${projectId(project)}">
                   <p class="project-tag">${project.note || category.title}</p>
-                  <h4>${project.name}</h4>
-                  <p class="repo-description">${repoDescription(repo)}</p>
+                  <h4>${renderedProject.name}</h4>
+                  <p class="repo-description">${renderedProject.description}</p>
                   <dl class="project-answers">
-                    <dt>Problem</dt><dd>${project.problem}</dd>
-                    <dt>For</dt><dd>${project.audience}</dd>
-                    <dt>Useful because</dt><dd>${project.value}</dd>
+                    <dt>Problem</dt><dd>${renderedProject.problem}</dd>
+                    <dt>For</dt><dd>${renderedProject.audience}</dd>
+                    <dt>Useful because</dt><dd>${renderedProject.value}</dd>
                   </dl>
-                  <div class="tech-list">${technologies.map((tech) => `<span>${tech}</span>`).join('')}</div>
+                  <div class="tech-list" aria-label="Relevant technologies">${technologies.map((tech) => `<span>${tech}</span>`).join('')}</div>
                   <div class="project-links">
-                    <a href="${repoLink(repo, project)}" target="_blank" rel="noopener noreferrer">Repository</a>
-                    ${homepage ? `<a href="${homepage}" target="_blank" rel="noopener noreferrer">Live demo</a>` : ''}
+                    <a href="${renderedProject.htmlUrl}" target="_blank" rel="noopener noreferrer">Repository</a>
+                    ${renderedProject.homepage ? `<a href="${renderedProject.homepage}" target="_blank" rel="noopener noreferrer">Live demo</a>` : ''}
                   </div>
                 </article>
               </div>`;
@@ -145,8 +149,34 @@
     `).join('');
   }
 
-  fetch(`https://api.github.com/users/${githubUser}/repos?per_page=100&sort=updated`)
-    .then((response) => (response.ok ? response.json() : []))
-    .then(renderProjects)
-    .catch(() => renderProjects([]));
+  function fetchRepo(project) {
+    return fetch(apiUrl(project), {
+      headers: { Accept: 'application/vnd.github+json' }
+    })
+      .then((response) => (response.ok ? response.json() : null))
+      .then((repo) => {
+        if (!repo) {
+          return [project.repo, null];
+        }
+
+        return fetch(repo.languages_url, {
+          headers: { Accept: 'application/vnd.github+json' }
+        })
+          .then((response) => (response.ok ? response.json() : {}))
+          .catch(() => ({}))
+          .then((languages) => [project.repo, { repo, languages }]);
+      })
+      .catch(() => [project.repo, null]);
+  }
+
+  function allProjects() {
+    return categories.flatMap((category) => category.projects);
+  }
+
+  renderProjects({});
+
+  Promise.all(allProjects().map(fetchRepo))
+    .then((entries) => renderProjects(Object.fromEntries(entries)))
+    .catch(() => renderProjects({}));
+
 })();
