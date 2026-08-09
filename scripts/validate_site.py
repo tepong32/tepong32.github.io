@@ -49,8 +49,10 @@ def main():
     errors=[]; pages=sorted(ROOT.rglob("*.html"))
     for page in pages: validate_page(page,errors)
     config=(ROOT/"js/project-config.js").read_text(encoding="utf-8")
-    for repo in ("TracePoint","TraceSync"):
+    for repo in ("grand","TracePoint","TraceSync"):
         if not re.search(rf"repo:\s*['\"]{repo}['\"]",config): errors.append(f"missing exact repository name {repo}")
+    for route in ("projects/grand/index.html","projects/tracepoint/index.html","projects/tracesync/index.html"):
+        if not (ROOT/route).exists(): errors.append(f"missing flagship case study: {route}")
     if not (ROOT/"assets/cristino-agapito-resume.pdf").exists(): errors.append("missing canonical résumé")
     for item in OBSOLETE:
         if (ROOT/item).exists(): errors.append(f"obsolete path remains: {item}")
