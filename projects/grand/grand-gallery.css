@@ -1,0 +1,36 @@
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.project-gallery .product-shot {
+  margin: 0;
+}
+
+.project-gallery-featured {
+  grid-column: 1 / -1;
+}
+
+.project-gallery figcaption strong {
+  display: block;
+  color: var(--navy-900);
+  font-size: .9rem;
+}
+
+.project-gallery img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: top;
+}
+
+@media (max-width: 575px) {
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .project-gallery-featured {
+    grid-column: auto;
+  }
+}
