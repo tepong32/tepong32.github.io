@@ -16,6 +16,7 @@ The site describes incomplete work transparently and does not present unavailabl
 - `projects/grand/` — GRAND multi-module Django/LGU platform case study.
 - `projects/tracepoint/` — TracePoint Django/GovTech case study.
 - `projects/tracesync/` — TraceSync desktop case study.
+- `assets/downloads/TraceSync-v0.9.1.exe` — verified, unsigned Windows x64 portfolio build.
 - `js/project-config.js` — curated portfolio copy and repository mapping.
 - `js/github-api.js` — shared GitHub REST API client.
 - `js/site.js` and `js/project-page.js` — page rendering and interaction.
