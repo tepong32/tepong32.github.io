@@ -6,7 +6,7 @@ A dependency-free GitHub Pages portfolio focused on Python, Django, workflow aut
 
 - **GRAND** — the primary and largest case study: an actively developed, multi-module Django platform for public-service and internal LGU workflows.
 - **TracePoint** — a focused Django case study covering secure citizen-request continuation, lifecycle policy, role-aware workflows, and audit history.
-- **TraceSync** — a Python desktop case study covering preview-before-copy synchronization, provider abstraction, cancellation, and automated tests.
+- **TraceSync** — a Python desktop case study covering saved folder pairs, confidence-aware preview-before-copy synchronization, durable history, and automated tests.
 
 The site describes incomplete work transparently and does not present unavailable deployments as live demos.
 
@@ -16,6 +16,7 @@ The site describes incomplete work transparently and does not present unavailabl
 - `projects/grand/` — GRAND multi-module Django/LGU platform case study.
 - `projects/tracepoint/` — TracePoint Django/GovTech case study.
 - `projects/tracesync/` — TraceSync desktop case study.
+- `assets/img/projects/tracesync/` — tagged v0.10.0 product-tour captures used by the TraceSync case study.
 - `assets/downloads/TraceSync-v0.9.1.exe` — verified, unsigned Windows x64 portfolio build.
 - `js/project-config.js` — curated portfolio copy and repository mapping.
 - `js/github-api.js` — shared GitHub REST API client.
