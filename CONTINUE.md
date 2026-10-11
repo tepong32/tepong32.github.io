@@ -1,19 +1,28 @@
-# Developer portfolio - continuation
+# Portfolio continuation
 
-Documentation baseline: 2026-09-08 on master. This is continuity setup, not a new feature/release acceptance.
+Updated 2026-10-11. Read AGENTS.md and README.md before editing.
 
-## Resume
+## TraceSync v0.11.0 publication
 
-Read [AGENTS.md](AGENTS.md), inspect current branch/status and recent history, then follow its documentation map.
+New portable Windows x64 download and SHA-256 file under assets/downloads/.
+Source release: tepong32/TraceSync master and v0.11.0 at
+378bad89a10b5e7ee90e6b7277ba60e61b00a08d (remote verified).
+Build: 12,805,215 bytes, SHA-256
+1205D84AE619D395B42D367F01901388E4185355AA01879285CDA1E63F37810C.
 
-Resume using README.md and the current curated project configuration. A future roadmap should record only user-agreed work; no new product priorities were inferred during continuity setup.
+Project config and case study report v0.11.0, with new packaged UI screenshots,
+159 passing release tests, backup recovery and the explicit overwrite concurrency
+limitation. SFTP is excluded. v0.10.0 and v0.9.1 downloads, hashes and historical
+product-tour evidence remain unchanged. No shared CSS/JS behavior changed.
 
-## State and boundaries
+## Validation
 
-Current source includes GRAND, TracePoint and TraceSync case studies, release comparisons and the developer resume refresh. Local generated output/tmp artifacts are not authoritative source.
+PASS: python scripts/validate_site.py (4 pages, local links and structure).
+PASS: browser inspection of case study and download cards at desktop and 390px
+mobile viewport; no horizontal overflow, download/checksum keyboard navigation.
+PASS: TraceSync executable sample sync and backup restore (see its CONTINUE.md).
+Publication: push this change to master, wait for Validate static portfolio and
+Pages success, then verify deployed executable SHA-256 against the value above.
 
-## Validation and next handoff
-
-PASS: documentation reference and whitespace checks. Application suites: NOT RUN - OUT OF SCOPE because this integration changes Markdown only. Prior test results remain historical, not rerun evidence.
-
-For the next substantial task, update the canonical handoff with objective, completed/in-progress scope, actual test commands/outcomes, limitations/blockers and next concrete step. Keep AGENTS.md focused on durable context; change roadmaps only for agreed direction changes.
+Original checkout's untracked output/ and tmp/ were left untouched. The isolated
+publication checkout is under .codex/worktrees/tracesync-portfolio-release.

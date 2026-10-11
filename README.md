@@ -17,7 +17,8 @@ The site describes incomplete work transparently and does not present unavailabl
 - `projects/tracepoint/` — TracePoint Django/GovTech case study.
 - `projects/tracesync/` — TraceSync desktop case study.
 - `assets/img/projects/tracesync/` — tagged v0.10.0 product-tour captures used by the TraceSync case study.
-- `assets/downloads/TraceSync-v0.10.0.exe` — current verified, unsigned Windows x64 build from the tagged v0.10.0 source.
+- `assets/downloads/TraceSync-v0.11.0.exe` — current unsigned Windows x64 build, with adjacent SHA-256 checksum and packaged UI captures.
+- `assets/downloads/TraceSync-v0.10.0.exe` — historical Folder Pair Workflow build, retained unchanged.
 - `assets/downloads/TraceSync-v0.9.1.exe` — previous verified build retained for release comparison.
 - `js/project-config.js` — curated portfolio copy and repository mapping.
 - `js/github-api.js` — shared GitHub REST API client.
