@@ -21,8 +21,11 @@ PASS: python scripts/validate_site.py (4 pages, local links and structure).
 PASS: browser inspection of case study and download cards at desktop and 390px
 mobile viewport; no horizontal overflow, download/checksum keyboard navigation.
 PASS: TraceSync executable sample sync and backup restore (see its CONTINUE.md).
-Publication: push this change to master, wait for Validate static portfolio and
-Pages success, then verify deployed executable SHA-256 against the value above.
+PASS: publication commit 1884aef53eae014704a876311f617af2a79dc13d reached master.
+Validate static portfolio run 38122154947 and Pages run 38122154175 succeeded.
+The public download returned HTTP 200, exactly 12,805,215 bytes and the SHA-256
+above; live case-study version, test count and displayed checksum also verified.
+A later documentation-only commit records this completed deployment evidence.
 
 Original checkout's untracked output/ and tmp/ were left untouched. The isolated
 publication checkout is under .codex/worktrees/tracesync-portfolio-release.
