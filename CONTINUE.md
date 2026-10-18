@@ -62,7 +62,20 @@ content, seven links, correct employment/training order and original PDF hashes.
 Canonical PDF: 91,328 bytes; SHA-256
 `f21ec10935f4d019391aa93e0615ebdab9c84a4d808631ca3a26afcd9b08c03a`.
 These are readability checks, not an employer ATS test or hiring guarantee.
-Next: publish this resume replacement and verify both live homepage downloads.
+PASS: release v0.0.2 at `6ec497e5ad32c95c3aa8eefed1801a58889016ab` reached
+remote master and its tag. Branch validation 39109604068, master validation
+39109623413, tag validation 39109623616 and Pages deployment 39109623416
+succeeded. Ten live files (homepage, canonical PDF and eight GRAND source/assets)
+returned HTTP 200 and exactly matched the commit. Both homepage download links
+resolve to the new dated URL; an actual browser download matched the approved
+one-page PDF byte for byte and passed text extraction. Evidence is in local
+`output/playwright/live-portfolio-6ec497e.json` and `live-developer-resume.pdf`.
+A transient GitHub API connection failure cleared on retry; final checks passed.
+
+The published base resume is the developer version. Keep the support version and
+editable sources local and tailor the appropriate resume for each application.
+This handoff follow-up changes documentation/version metadata only; the verified
+v0.0.2 website and resume payload stays unchanged.
 
 ## Local ATS resume deliverables
 
