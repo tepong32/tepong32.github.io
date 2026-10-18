@@ -8,6 +8,10 @@ Dependency-free GitHub Pages portfolio with curated project narratives, shared J
 
 Keep claims grounded in source/release evidence. Do not present unavailable deployments as live demos or fabricate GitHub activity. Keep the public API client token-free and preserve honest offline/rate-limit behavior. Curated text and live repository metadata have distinct ownership.
 
+GRAND screenshots must come from actual application screens with synthetic data,
+identify their source revision, and preserve the distinction between implemented
+Finance/inventory workflows and pending production or municipal acceptance.
+
 ### Development state
 
 Current source includes GRAND, TracePoint and TraceSync case studies, release comparisons and the developer resume refresh. Local generated output/tmp artifacts are not authoritative source.

@@ -1,21 +1,161 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GRAND Case Study | Cristino Agapito Jr</title><meta name="description" content="GRAND case study: an evolving modular Django platform for local-government employee, public-service, and administrative workflows."><link rel="canonical" href="https://tepong32.github.io/projects/grand/"><meta property="og:title" content="GRAND | Modular Django Platform Case Study"><meta property="og:description" content="Cristino Agapito Jr's largest active project: an evolving LGU operations platform built with Django."><link rel="icon" href="/assets/img/smile.png"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"><link rel="stylesheet" href="/portfolio-refresh.css"><link rel="stylesheet" href="/projects/grand/grand-gallery.css"></head>
-<body data-page="project" data-project-repo="grand"><a class="skip-link" href="#main-content">Skip to main content</a><header class="site-header sticky-top"><nav class="navbar" aria-label="Project navigation"><div class="container"><a class="navbar-brand" href="/"><span class="brand-mark">CA</span><span>Cristino Agapito Jr</span></a><a class="btn nav-cta" href="/#work"><i class="bi bi-arrow-left"></i> All projects</a></div></nav></header>
-<main id="main-content"><section class="project-hero"><div class="container"><ol class="breadcrumb-list"><li><a href="/">Portfolio</a></li><li>GRAND</li></ol><div class="project-hero-grid"><div><p class="eyebrow">Django · LGU operations · Active development</p><h1>GRAND</h1><p class="hero-lead">The largest codebase in this portfolio: a modular Django platform for employee records, leave, public assistance, announcements, departments, and administrative workflows.</p><div class="cta-group"><a class="btn cta-primary" href="https://github.com/tepong32/grand" target="_blank" rel="noopener noreferrer">View repository <i class="bi bi-github"></i></a><a class="text-link light" href="#activity">Latest activity</a></div></div><dl class="project-facts"><div><dt>Contribution</dt><dd>Product design, architecture, and full-stack implementation</dd></div><div><dt>Stack</dt><dd>Python, Django, JavaScript, SQL</dd></div><div><dt>Status</dt><dd>Active platform development</dd></div><div><dt>Scope</dt><dd>Public services and internal LGU operations</dd></div></dl></div></div></section>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>GRAND Finance and Inventory Case Study | Cristino Agapito Jr</title>
+  <meta name="description" content="A Django municipal platform connecting Finance, asset inventory, citizen services and records. Explore database boundaries, approvals, audit history and integration testing.">
+  <link rel="canonical" href="https://tepong32.github.io/projects/grand/">
+  <meta property="og:title" content="GRAND | Django Finance and Inventory Platform">
+  <meta property="og:description" content="Cristino Agapito Jr's municipal workflow platform: Budget, Accounting, Treasury, inventory and public services, with source-backed engineering evidence.">
+  <link rel="icon" href="/assets/img/smile.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/portfolio-refresh.css">
+  <link rel="stylesheet" href="/projects/grand/grand-gallery.css?v=20261018">
+</head>
+<body data-page="project" data-project-repo="grand">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header sticky-top"><nav class="navbar" aria-label="Project navigation"><div class="container">
+  <a class="navbar-brand" href="/"><span class="brand-mark">CA</span><span>Cristino Agapito Jr</span></a>
+  <a class="btn nav-cta" href="/#work"><i class="bi bi-arrow-left" aria-hidden="true"></i> All projects</a>
+</div></nav></header>
+<main id="main-content">
+<section class="project-hero"><div class="container">
+  <ol class="breadcrumb-list"><li><a href="/">Portfolio</a></li><li>GRAND</li></ol>
+  <div class="project-hero-grid"><div>
+    <p class="eyebrow">Django · Finance &amp; inventory · Active development</p>
+    <h1>GRAND</h1>
+    <p class="hero-lead">A municipal operations platform connecting Budget, Accounting, Treasury, asset inventory, and citizen services.</p>
+    <p>I turn firsthand accounting and local-government experience into Django data models, approval workflows, access controls, and testable software.</p>
+    <div class="cta-group">
+      <a class="btn cta-primary" href="https://github.com/tepong32/grand" target="_blank" rel="noopener noreferrer">View repository <i class="bi bi-github" aria-hidden="true"></i></a>
+      <a class="text-link light" href="#walkthrough">See application screens</a>
+      <a class="text-link light" href="#engineering-evidence">Engineering evidence</a>
+      <a class="text-link light" href="#activity">Latest activity</a>
+    </div>
+  </div><dl class="project-facts">
+    <div><dt>Contribution</dt><dd>Product design, data architecture, full-stack implementation, and testing</dd></div>
+    <div><dt>Stack</dt><dd>Python, Django, MySQL, SQLite, JavaScript</dd></div>
+    <div><dt>Scope</dt><dd>Finance, inventory, public services, workforce, and records</dd></div>
+    <div><dt>Status</dt><dd>Active development; production acceptance pending</dd></div>
+  </dl></div>
+</div></section>
 <section class="content-section"><div class="container"><div class="case-grid"><div class="case-copy">
-<section><p class="eyebrow">The problem</p><h2>One organization, many disconnected workflows</h2><p>Local-government teams serve citizens while managing employees, departments, leave, records, announcements, and back-office approvals. GRAND explores how those related workflows can share identity, permissions, data, and operational visibility without becoming one tightly coupled feature.</p><div class="workflow-visual"><div class="workflow-step"><strong>Public</strong><span>Requests and content</span></div><div class="workflow-step"><strong>Employees</strong><span>Profiles and access</span></div><div class="workflow-step"><strong>Operations</strong><span>Leave and departments</span></div><div class="workflow-step"><strong>Admin</strong><span>Review and oversight</span></div></div><aside class="story-panel"><p class="card-label">Why I called it GRAND</p><h3>It started with the work in front of me</h3><p>After joining a local government office, I kept seeing paper records, repeated encoding, slow handoffs, and information that depended on finding the right person. GRAND began as spare-time work on those problems—one useful workflow at a time. The scope became larger because the workflows were already connected in real life.</p></aside></section>
-<section><p class="eyebrow">Interface walkthrough</p><h2>Different workspaces on one permission model</h2><p>These captures use synthetic data. They show how the same codebase serves public visitors, specialized teams, and departments configured after deployment.</p><div class="project-gallery"><figure class="product-shot project-gallery-featured"><img src="/assets/img/projects/grand/grand-hr-dashboard.png" alt="Grand HR dashboard with live team, plantilla, vacancy, and leave metrics" loading="eager"><figcaption><strong>HR workspace.</strong> Workforce metrics, team context, internal notices, and relevant modules share one dashboard.</figcaption></figure><figure class="product-shot"><img src="/assets/img/projects/grand/grand-dynamic-department-dashboard.png" alt="Grand dashboard generated for the Municipal Planning and Development Office" loading="lazy"><figcaption><strong>Configured departments.</strong> The generic dashboard supports newly added departments without a department-specific template.</figcaption></figure><figure class="product-shot"><img src="/assets/img/projects/grand/grand-mswd-operations.png" alt="Grand MSWD staff request queue with filters and request status" loading="lazy"><figcaption><strong>Assistance queue.</strong> MSWD staff filter requests, review status, and open the next work item.</figcaption></figure><figure class="product-shot"><img src="/assets/img/projects/grand/grand-public-services.png" alt="Grand public portal showing six municipal service entry points" loading="lazy"><figcaption><strong>Public service directory.</strong> Residents can find assistance, tracking, announcements, offices, and contact information.</figcaption></figure><figure class="product-shot"><img src="/assets/img/projects/grand/grand-assistance-portal.png" alt="Grand public assistance portal with new-request and secure tracking actions" loading="lazy"><figcaption><strong>Account-free assistance.</strong> Public users can submit and securely track a request without creating an account.</figcaption></figure></div></section>
-<section><p class="eyebrow">Engineering decisions</p><h2>Grow by domain, not by one oversized application</h2><div class="decision-grid"><article class="decision-card"><h3>Modular Django apps</h3><p>Users, profiles, leave, assistance, departments, home, salaries, and admin helpers have distinct responsibilities.</p></article><article class="decision-card"><h3>Role-aware workflows</h3><p>Public, employee, HR, department, and administrative actions require different access and interfaces.</p></article><article class="decision-card"><h3>Traceable changes</h3><p>Profile edit logs and assistance update histories preserve operational context.</p></article><article class="decision-card"><h3>Incremental delivery</h3><p>Usable workflows can mature while salary and calendar domains remain explicitly planned work.</p></article></div></section>
-<section><p class="eyebrow">Architecture</p><h2>A multi-domain Django foundation</h2><div class="architecture-panel">Public-facing services        Internal employee workflows
-          |                              |
-          +------ Django views/forms ----+
-                         |
-       users · profiles · departments · home
-          |          |           |          |
-     assistance   leave_mgt   salaries   admin_helper
-                         |
-                 Django ORM + media</div></section>
-<section><p class="eyebrow">Development status</p><h2>Working scope and remaining work</h2><div class="quality-grid"><article class="quality-card"><h3>Implemented foundations</h3><p>Authentication, employee and citizen profiles, public assistance flows, leave rules, announcements, and department structures are represented in the codebase.</p></article><article class="quality-card"><h3>Under refinement</h3><p>Role assignment, user experience, policy details, and cross-module behavior continue to evolve.</p></article><article class="quality-card"><h3>Not yet complete</h3><p>Salary workflows and working-day/calendar integration remain redesign or future work.</p></article><article class="quality-card"><h3>Deployment status</h3><p>There is no public demo at present. The screenshots and live repository activity are the available project evidence.</p></article></div></section>
-<section><p class="eyebrow">Quality evidence</p><h2>Tests and safeguards follow domain risk</h2><div class="quality-grid"><article class="quality-card"><h3>Eight app test modules</h3><p>Tests are organized alongside users, profiles, departments, leave, assistance, home, salaries, and admin helpers.</p></article><article class="quality-card"><h3>Secure public continuation</h3><p>Assistance requests support reference-based tracking and controlled anonymous edits without requiring accounts.</p></article><article class="quality-card"><h3>Operational validation</h3><p>Leave deductions, weekend handling, duplicate prevention, edit locks, and file-level review states encode business rules.</p></article><article class="quality-card"><h3>Change history</h3><p>Profile and assistance updates retain evidence that helps staff understand what changed.</p></article></div></section>
+
+<section id="scope">
+  <p class="eyebrow">The problem</p><h2>One transaction crosses several offices</h2>
+  <p>A funded request can pass through Budget, Accounting, Treasury, inventory staff, and records custodians. Each office has different authority, but the amount, supporting documents, and transaction history must remain connected. GRAND models those responsibilities as separate Django applications sharing identity and department context.</p>
+  <aside class="story-panel"><p class="card-label">From office work to software</p><h3>Built around problems I understand firsthand</h3>
+    <p>Municipal accounting exposed me to repeated encoding, paper handoffs, and records that need to survive review. I started GRAND outside office hours to turn those operating rules into explicit software behavior. It has grown from employee and assistance workflows into Finance, reporting, records, and inventory.</p>
+  </aside>
+</section>
+
+<section id="finance">
+  <p class="eyebrow">Finance workflows</p><h2>Follow the source from Budget to Treasury</h2>
+  <p>I develop linked workflows for appropriations, allotments and obligations, payable review, journal posting, disbursement vouchers, payment instruments, and bank reconciliation. Independent preparation and approval steps preserve who proposed a transaction, who authorized it, and which source it used.</p>
+  <div class="workflow-visual" aria-label="Simplified Finance workflow">
+    <div class="workflow-step"><strong>Budget</strong><span>Authorize and certify funding</span></div>
+    <div class="workflow-step"><strong>Accounting</strong><span>Review payables and post journals</span></div>
+    <div class="workflow-step"><strong>Treasury</strong><span>Release and reconcile payments</span></div>
+    <div class="workflow-step"><strong>Reporting</strong><span>Trace outputs to source records</span></div>
+  </div>
+  <p class="mt-3">Posted financial history is retained. Corrections use linked reversals and reviewed successors so an amended transaction remains explainable. Reports, ledgers, and exported evidence preserve their source references and checksums.</p>
+  <p><a href="https://github.com/tepong32/grand/blob/4e60e996f64c7c16fc39a4b5966e62b6b8e2cebf/docs/FINANCE_CROSS_CYCLE_REPLAY.md">Read the synthetic Budget-to-Treasury replay</a></p>
+</section>
+
+<section id="inventory">
+  <p class="eyebrow">Inventory and custody</p><h2>Connect physical assets to accountable records</h2>
+  <p>The integrated General Services Office (GSO) inventory module covers asset registers, receiving and inspection, asset handoffs, consumable requests and issues, physical verification, and reviewed disposal requests. It reuses GRAND's authentication, department membership, and access controls.</p>
+  <p>Physical-count reconciliation compares the inventory register, observed assets, and retained Accounting CSV evidence. Finance associations have their own review: recording a receipt or moving an asset does not silently post a journal or establish its accounting valuation.</p>
+  <p>GRAND's separate TracePoint module tracks QR-labelled paper packets and confirmed handovers. Records manages retained files and controlled retrieval, keeping document custody distinct from financial approval.</p>
+  <p><a href="https://github.com/tepong32/grand/blob/4e60e996f64c7c16fc39a4b5966e62b6b8e2cebf/docs/GSO_INTEGRATION.md">Read the published inventory integration checkpoint</a></p>
+</section>
+
+<section id="walkthrough">
+  <p class="eyebrow">Actual application screens</p><h2>Finance and inventory in use</h2>
+  <p>Captured on 18 October 2026 from the published v0.7.182 application running locally with fresh synthetic data. These are working interfaces, not mockups or records from live municipal operations. Open an image to inspect it at full size.</p>
+  <div class="project-gallery">
+  <figure class="product-shot project-gallery-featured">
+    <a href="/assets/img/projects/grand/grand-v0.7.182-finance-operations.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Finance operations"><img src="/assets/img/projects/grand/grand-v0.7.182-finance-operations.png" alt="GRAND Finance operations with Accounting and Treasury registers" width="1600" height="1200" loading="lazy"></a>
+    <figcaption><strong>Finance operations.</strong> An Accounting user’s workspace connects disbursement cases, journals, ledgers, and bank-advice work. Available registers follow the user’s permissions. <a href="/assets/img/projects/grand/grand-v0.7.182-finance-operations.png" target="_blank" rel="noopener noreferrer">View full size <span class="visually-hidden">— Finance operations</span></a></figcaption>
+  </figure>
+  <figure class="product-shot">
+    <a href="/assets/img/projects/grand/grand-v0.7.182-finance-case.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: One case across offices"><img src="/assets/img/projects/grand/grand-v0.7.182-finance-case.png" alt="Completed synthetic disbursement case linked to a Budget obligation" width="1600" height="1200" loading="lazy"></a>
+    <figcaption><strong>One case across offices.</strong> A completed synthetic payable retains its certified Budget obligation, claim amount, supporting references, and independent Accounting review. <a href="/assets/img/projects/grand/grand-v0.7.182-finance-case.png" target="_blank" rel="noopener noreferrer">View full size <span class="visually-hidden">— One case across offices</span></a></figcaption>
+  </figure>
+  <figure class="product-shot">
+    <a href="/assets/img/projects/grand/grand-v0.7.182-bank-reconciliation.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Reconcile to the posted ledger"><img src="/assets/img/projects/grand/grand-v0.7.182-bank-reconciliation.png" alt="Synthetic bank reconciliation with a zero difference and retained review history" width="1600" height="1200" loading="lazy"></a>
+    <figcaption><strong>Reconcile to the posted ledger.</strong> The synthetic statement matches a posted payment journal, reaches zero difference, and retains the independent review history. <a href="/assets/img/projects/grand/grand-v0.7.182-bank-reconciliation.png" target="_blank" rel="noopener noreferrer">View full size <span class="visually-hidden">— Reconcile to the posted ledger</span></a></figcaption>
+  </figure>
+  <figure class="product-shot project-gallery-featured">
+    <a href="/assets/img/projects/grand/grand-v0.7.182-inventory-register.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Inventory with review status"><img src="/assets/img/projects/grand/grand-v0.7.182-inventory-register.png" alt="GRAND asset register showing four synthetic equipment and furniture records" width="1440" height="1000" loading="lazy"></a>
+    <figcaption><strong>Inventory with review status.</strong> Equipment and furniture remain searchable by class and status. Unreviewed Accounting classifications stay visibly unresolved. <a href="/assets/img/projects/grand/grand-v0.7.182-inventory-register.png" target="_blank" rel="noopener noreferrer">View full size <span class="visually-hidden">— Inventory with review status</span></a></figcaption>
+  </figure>
+  <figure class="product-shot project-gallery-featured">
+    <a href="/assets/img/projects/grand/grand-v0.7.182-receiving-inspection.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: From delivery to registered asset"><img src="/assets/img/projects/grand/grand-v0.7.182-receiving-inspection.png" alt="Synthetic receiving and inspection record with documents and an independent acceptance history" width="1440" height="1445" loading="lazy"></a>
+    <figcaption><strong>From delivery to registered asset.</strong> The accepted synthetic receipt links delivery quantities, retained documents, the registered asset, and separate preparation and review actors. <a href="/assets/img/projects/grand/grand-v0.7.182-receiving-inspection.png" target="_blank" rel="noopener noreferrer">View full size <span class="visually-hidden">— From delivery to registered asset</span></a></figcaption>
+  </figure>
+  </div>
+  <details class="historical-captures"><summary>Earlier public-service, HR, and assistance screens</summary>
+    <p class="mt-3">These earlier synthetic captures show the platform’s other workspaces. They are retained separately from the current Finance and inventory walkthrough.</p>
+<div class="project-gallery"><figure class="product-shot project-gallery-featured"><img src="/assets/img/projects/grand/grand-hr-dashboard.png" alt="GRAND HR dashboard with synthetic team, plantilla, vacancy, and leave metrics" loading="eager"><figcaption><strong>HR workspace.</strong> Workforce metrics, team context, internal notices, and relevant modules share one dashboard.</figcaption></figure><figure class="product-shot"><img src="/assets/img/projects/grand/grand-dynamic-department-dashboard.png" alt="Grand dashboard generated for the Municipal Planning and Development Office" loading="lazy"><figcaption><strong>Configured departments.</strong> The generic dashboard supports newly added departments without a department-specific template.</figcaption></figure><figure class="product-shot"><img src="/assets/img/projects/grand/grand-mswd-operations.png" alt="Grand MSWD staff request queue with filters and request status" loading="lazy"><figcaption><strong>Assistance queue.</strong> MSWD staff filter requests, review status, and open the next work item.</figcaption></figure><figure class="product-shot"><img src="/assets/img/projects/grand/grand-public-services.png" alt="Grand public portal showing six municipal service entry points" loading="lazy"><figcaption><strong>Public service directory.</strong> Residents can find assistance, tracking, announcements, offices, and contact information.</figcaption></figure><figure class="product-shot"><img src="/assets/img/projects/grand/grand-assistance-portal.png" alt="Grand public assistance portal with new-request and secure tracking actions" loading="lazy"><figcaption><strong>Account-free assistance.</strong> Public users can submit and securely track a request without creating an account.</figcaption></figure></div>
+  </details>
+</section>
+
+<section id="engineering">
+  <p class="eyebrow">Engineering decisions</p><h2>Make authority and data ownership explicit</h2>
+  <div class="decision-grid">
+    <article class="decision-card"><h3>Separate database responsibilities</h3><p>A Django database router places Accounting and Budget authority data in the Finance database. Identity, operational cases, inventory, and its Finance adapter remain in the default store. Explicit references and reconciliation connect the two.</p></article>
+    <article class="decision-card"><h3>Permissions at workflow boundaries</h3><p>Department scope and role checks apply to actions and downloads. Independent maker-checker review separates preparation from approval; read-only acceptance-test access does not grant financial mutation rights.</p></article>
+    <article class="decision-card"><h3>History survives corrections</h3><p>Versioned decisions, immutable posted records, source-linked reversals, and retained export bytes preserve what was approved. Corrections add evidence instead of overwriting the original transaction.</p></article>
+    <article class="decision-card"><h3>Test recovery and competing actions</h3><p>I use regression and integration tests to exercise authorization, duplicate prevention, reconciliation, interrupted operations, and native MySQL concurrency. Synthetic transaction replays connect checks across office boundaries.</p></article>
+  </div>
+  <p class="mt-3">My work spans requirements, Django models and services, forms and interfaces, database migrations, tests, and release documentation. I use AI-assisted development with source review and validation of generated changes.</p>
+</section>
+
+<section id="platform">
+  <p class="eyebrow">Shared platform</p><h2>Public services and internal operations</h2>
+  <div class="quality-grid">
+    <article class="quality-card"><h3>Citizen and employee workflows</h3><p>Account-free assistance submission and tracking, staff document review, social-welfare programs, employee profiles, leave, announcements, and configurable department dashboards share the platform.</p></article>
+    <article class="quality-card"><h3>Reports and controlled records</h3><p>Report definitions, scheduled generation, review, approval, retention, and audited downloads support office work. Portable exports retain checksums and source history for transfer through TraceSync.</p></article>
+  </div>
+</section>
+
+<section id="engineering-evidence">
+  <p class="eyebrow">Source-backed evidence</p><h2>What the tests demonstrate</h2>
+  <div class="quality-grid">
+    <article class="quality-card"><h3>Cross-office transaction replay</h3><p>An automated synthetic case connects fiscal setup and opening balances to a certified obligation, payable, voucher, payment, bank reconciliation, and final Treasury report. Assertions check amounts and source identity across the workflow.</p></article>
+    <article class="quality-card"><h3>Published integration checkpoint</h3><p>The v0.7.174 GSO integration record accounts for 2,724 discovered test cases per database backend and reports zero native MySQL skips. This is a dated integration result, not a claim that every later revision has the same test count.</p></article>
+  </div>
+  <p class="mt-3">Scope reviewed on <time datetime="2026-10-18">18 October 2026</time> against published <a href="https://github.com/tepong32/grand/blob/4e60e996f64c7c16fc39a4b5966e62b6b8e2cebf/README.md">v0.7.182 source</a>. The <a href="https://github.com/tepong32/grand/blob/4e60e996f64c7c16fc39a4b5966e62b6b8e2cebf/docs/GSO_INTEGRATION.md">integration record</a> and <a href="https://github.com/tepong32/grand/blob/4e60e996f64c7c16fc39a4b5966e62b6b8e2cebf/docs/FINANCE_CROSS_CYCLE_REPLAY.md">replay specification</a> describe their validation boundaries. Live repository activity appears below.</p>
+</section>
+
+<section id="status">
+  <p class="eyebrow">Development status</p><h2>Implemented software and remaining acceptance</h2>
+  <div class="quality-grid">
+    <article class="quality-card"><h3>Available in source</h3><p>Finance workflow controls, integrated inventory, citizen services, workforce features, reporting, records, and paper-custody modules are implemented to the scopes documented in the repository.</p></article>
+    <article class="quality-card"><h3>Still under development</h3><p>Finance functional completion, inventory cost allocation, and further exception workflows remain active work. The project does not claim every municipal scenario is complete.</p></article>
+    <article class="quality-card"><h3>Operational acceptance pending</h3><p>Local rules and forms, real-data imports, physical signatures, storage and recovery qualification, and formal municipal acceptance require separate evidence. Passing software tests does not establish official use.</p></article>
+    <article class="quality-card"><h3>Deployment boundary</h3><p>No verified public application demo is offered here. This case study presents source, documented validation, and synthetic screenshots; production rollout and acceptance remain pending.</p></article>
+  </div>
+</section>
 <section id="activity"><div class="activity-shell"><div class="activity-header"><div><p class="eyebrow">Public GitHub API</p><h2>Repository activity</h2></div><button id="activity-retry" class="btn retry-button" hidden>Retry</button></div><p id="activity-status" class="activity-status" role="status">Loading public GitHub activity…</p><div class="activity-grid mt-3"><section class="activity-panel"><h3>Repository</h3><ul id="activity-metadata" class="activity-list"><li>Loading…</li></ul></section><section class="activity-panel"><h3>Recent commits</h3><ul id="activity-commits" class="activity-list"><li>Loading…</li></ul></section><section class="activity-panel"><h3>Pull requests</h3><ul id="activity-pulls" class="activity-list"><li>Loading…</li></ul></section></div></div></section>
-</div><aside class="case-sidebar"><section class="sidebar-card"><p class="card-label">Implemented domains</p><h2>Current scope</h2><ul class="feature-list"><li>Users and role-aware profiles</li><li>Employee leave workflows</li><li>Public assistance requests</li><li>Announcements and departments</li><li>Administrative dashboards and logs</li></ul></section><section class="sidebar-card"><p class="card-label">Engineering contribution</p><h2>Largest project scope</h2><p>I translate firsthand LGU operations into Django domain models, service boundaries, permissions, and interfaces while keeping unfinished areas explicitly identified.</p></section><section class="sidebar-card"><p class="card-label">Next priorities</p><ul class="roadmap-list"><li>Integrate TracePoint lifecycle patterns</li><li>Clarify permissions and role assignment</li><li>Complete leave policy and holiday rules</li><li>Refine public and staff interfaces</li><li>Redesign salary workflows</li></ul></section></aside></div></div></section></main>
-<footer class="site-footer"><div class="container"><div class="footer-bottom"><span>© <span data-current-year></span> Cristino Agapito Jr</span><a class="text-link light" href="mailto:cristinoagapitojr@gmail.com">Discuss this project</a></div></div></footer><script src="/js/project-config.js"></script><script src="/js/github-api.js"></script><script src="/js/project-page.js"></script></body></html>
+
+</div><aside class="case-sidebar">
+  <section class="sidebar-card"><p class="card-label">Explore the implementation</p><h2>Current scope</h2><ul class="feature-list">
+    <li><a href="#finance">Budget, Accounting, and Treasury</a></li>
+    <li><a href="#inventory">Asset inventory and custody</a></li>
+    <li><a href="#walkthrough">Finance and inventory screenshots</a></li>
+    <li><a href="#engineering">Database and approval controls</a></li>
+    <li><a href="#platform">Citizen services, workforce, and records</a></li>
+    <li><a href="#engineering-evidence">Tests and source evidence</a></li>
+  </ul></section>
+  <section class="sidebar-card"><p class="card-label">My contribution</p><h2>From operating rules to tested code</h2><p>I translate municipal processes into data models, services, permissions, interfaces, and integration tests. Accounting experience helps me identify the evidence and exception handling each workflow needs.</p></section>
+  <section class="sidebar-card"><p class="card-label">Acceptance boundary</p><p>Active development with synthetic validation. Official forms, real operations, and production acceptance remain separate gates.</p><a href="#status">Read the current limits</a></section>
+</aside></div></div></section>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-bottom"><span>© <span data-current-year></span> Cristino Agapito Jr</span><a class="text-link light" href="mailto:cristinoagapitojr@gmail.com">Discuss this project</a></div></div></footer>
+<script src="/js/project-config.js"></script><script src="/js/github-api.js"></script><script src="/js/project-page.js"></script>
+</body>
+</html>

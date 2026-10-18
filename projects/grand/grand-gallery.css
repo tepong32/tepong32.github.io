@@ -20,9 +20,29 @@
 }
 
 .project-gallery img {
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  object-position: top;
+  height: auto;
+}
+
+.project-hero .breadcrumb-list {
+  color: #c1d0dd;
+}
+
+.project-gallery a {
+  display: block;
+}
+
+.project-gallery a:focus-visible {
+  outline: 3px solid var(--blue-600);
+  outline-offset: -3px;
+}
+
+.historical-captures {
+  margin-top: 1.5rem;
+}
+
+.historical-captures summary {
+  cursor: pointer;
+  font-weight: 650;
 }
 
 @media (max-width: 575px) {
