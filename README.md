@@ -13,6 +13,7 @@ The site describes incomplete work transparently and does not present unavailabl
 ## Structure
 
 - `index.html` — hiring-focused homepage, flagship projects, and live repository feed.
+- `assets/cristino-agapito-resume.pdf` — the one-page Python / Automation Developer resume, with selectable text and project links; both homepage download links use this canonical file.
 - `projects/grand/` — GRAND multi-module Django/LGU platform case study.
 - `assets/img/projects/grand/` — GRAND application captures; capture provenance and synthetic-data boundaries are documented alongside the images.
 - `projects/tracepoint/` — TracePoint Django/GovTech case study.

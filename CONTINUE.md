@@ -21,11 +21,16 @@ fixture generation and limitations. Existing GRAND source/databases were preserv
 The isolated capture checkout is `.codex/worktrees/grand-portfolio-capture-20261018`;
 its ignored `.tmp/portfolio_*` scripts and runtime allow local reproduction.
 
-The public resume asset and other case studies are unchanged. On 18 October 2026
-the user authorized Version Manager commit, integration and live publication.
-The reviewed release contains only the portfolio source, five screenshots and
-documentation; generated output/tmp files remain local. Hosted validation and
-live verification are the next publication gates.
+On 18 October 2026 the user authorized Version Manager commit, integration and
+live publication. Portfolio release v0.0.1 at
+`c6d01f1329471b657461ad44282452dde2c1f5a5` reached remote master and its tag.
+Branch validation run 39109411150, master validation run 39109436328, tag
+validation run 39109436440 and Pages run 39109435690 all succeeded.
+The live HTML, scoped CSS, project configuration and five PNGs returned HTTP 200
+and exactly matched committed bytes. Live desktop/mobile browser inspection
+confirmed the new page, screenshots and public GitHub activity.
+Other case studies and historical releases remain unchanged; generated output/tmp
+files remain local. The subsequent resume request is recorded below.
 
 Validation for this refresh:
 - PASS: `python scripts/validate_site.py` (4 pages) and `git diff --check`.
@@ -42,9 +47,22 @@ Validation for this refresh:
   application code was unchanged. Synthetic fixture generation and screenshot
   inspection do not establish production or municipal acceptance.
 
-Next: run hosted validation on the release branch, fast-forward master, publish
-the release tag, and verify the Pages deployment and live asset bytes. Preserve
-local resume outputs and other unrelated work.
+Deployment evidence is retained locally in `output/playwright/live-portfolio-c6d01f1.json`.
+
+## Developer resume download
+
+The user subsequently requested replacing the portfolio download with the new
+developer resume. `assets/cristino-agapito-resume.pdf` now contains the exact
+Python / Automation Developer PDF from the local deliverables. Both homepage
+links include a dated cache key. The source DOCX, support resume, and original
+Downloads/Documents PDFs are unchanged. The old public PDF remains in Git history.
+
+PASS: final rendered page inspected; one page, selectable text, matching DOCX
+content, seven links, correct employment/training order and original PDF hashes.
+Canonical PDF: 91,328 bytes; SHA-256
+`f21ec10935f4d019391aa93e0615ebdab9c84a4d808631ca3a26afcd9b08c03a`.
+These are readability checks, not an employer ATS test or hiring guarantee.
+Next: publish this resume replacement and verify both live homepage downloads.
 
 ## Local ATS resume deliverables
 
