@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.0.4] - 2026-11-10
+### Maintenance
+- Update version_manager to v2.0.1 (preserve leading spaces in git output)
+
 ## [0.0.3] - 2026-10-18
 ### Documentation
 - Record verified portfolio and resume deployment
